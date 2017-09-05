@@ -15,7 +15,7 @@ $(document).on('click', '.favorite', function (e) {
         }).done(function (msg) {
             if (msg.status > 0) {
                 _this.addClass('add');
-                $.get('/ajax/favorite.php', '', function (data) {
+                $.get('/ajax/favorite-update.php', '', function (data) {
                     $('.favorite-ajax').html(data);
                 });
             }
@@ -33,7 +33,7 @@ $(document).on('click', '.favorite', function (e) {
         }).done(function (msg) {
             if (msg.status > 0) {
                 _this.removeClass('add');
-                $.get('/ajax/favorite.php', '', function (data) {
+                $.get('/ajax/favorite-update.php', '', function (data) {
                     $('.favorite-ajax').html(data);
                 });
             }
